@@ -1,3 +1,19 @@
+.container {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+}
+
+.dashboard {
+  grid-column: 2 / 12;
+}
+/*menu de navigation*/
+
+.navbar {
+  grid-column: 1 / 13;
+  padding-bottom: 0.5em;
+  background-color: darkgrey;
+}
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -12,6 +28,12 @@
   background-color: lightgrey;
 }
 
+.li_admin {
+  line-height: 2;
+  width: 15%;
+  text-align: center;
+}
+
 .lien {
   text-decoration: none;
 }
@@ -22,4 +44,38 @@
 
 .lien:focus, .lien:active, .lien:hover {
   color: green;
+}
+
+/*contenu*/
+
+.text {
+  grid-column: 4 / 10;
+  margin-top: 1em;
+  padding: 0.2em;
+  border: solid black;
+}
+
+.modération {
+  grid-column: 2 / 12;
+  margin-top: 1em;
+  border: solid black;
+}
+
+/*contact*/
+
+.contact {
+  grid-column: 5 / 9;
+}
+
+.form {
+  height: 35vh;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.champs {
+width: 30vw;
 }

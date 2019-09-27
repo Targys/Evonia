@@ -1,11 +1,41 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
+const HistoriqueList = props => (
+	<div>
+		<h3>{props.historique.titre}</h3>
+		<div>{props.historique.description}</div>
+	</div>
+)
 
 export default class Historique extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {historiques: []};
+	}
+
+	componentDidMount() {
+		axios.get('http://localhost:5000/dashboard/ajout_historique')
+			.then(response => {
+				this.setState({ historiques: response.data })
+			})
+			.catch((error) => {
+				console.log(error);
+			})
+	}
+
+	historiqueList() {
+		return this.state.historiques.map(currenthistorique => {
+			return <HistoriqueList historique={currenthistorique} key={currenthistorique._id}/>;
+		})
+	}
 
 	render() {
 		return (
-				<div>
+				<div className="text">
 					<h3>Historique des saisons.</h3>
+					{this.historiqueList()}
 				</div>
 			)
 	}
