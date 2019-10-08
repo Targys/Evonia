@@ -10,8 +10,9 @@ import Vidéos from "./components/vidéos.component";
 import Modération from "./components/modération.component";
 import Contact from "./components/contact.component";
 import Admin from "./components/login_admin.component";
-import Dashboard from "./components/dashboard.component.js";
+import Dashboard from "./components/dashboard.component";
 import { PrivateRoute } from "./components/private_route.component";
+import Footer from "./components/footer.component";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
     <Route path="/contact" exact component={Contact} />
     <Route path="/admin" exact component={Admin} />
     <PrivateRoute path='/dashboard' component={Dashboard} />
+    <Footer />
     </div>
     </Router>
   );

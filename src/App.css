@@ -5,18 +5,24 @@ grid-template-columns: repeat(12, 1fr);
 
 .dashboard {
   grid-column: 2 / 12;
+  margin-top: 8em;
+  border: solid black;
+  background-color: white;
 }
 /*menu de navigation*/
 
 .navbar {
-  grid-column: 1 / 13;
+  width: 100%;
   padding-bottom: 0.5em;
   background-color: darkgrey;
+  background-image: url("./images_pattern_banniere/dark_oak_pattern.png");
+  position: fixed;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   list-style: none;
 }
@@ -26,6 +32,7 @@ grid-template-columns: repeat(12, 1fr);
   width: 10%;
   text-align: center;
   background-color: lightgrey;
+  background-image: url("./images_pattern_banniere/oak-plank-pattern.jpg");
 }
 
 .li_admin {
@@ -39,32 +46,81 @@ grid-template-columns: repeat(12, 1fr);
 }
 
 .lien:link, .lien:visited {
+  color: white;
+}
+
+.dashboard .lien:link, .dashboard .lien:visited {
   color: black;
 }
 
 .lien:focus, .lien:active, .lien:hover {
-  color: green;
+  color: lightgreen;
 }
 
 /*contenu*/
 
 .text {
   grid-column: 4 / 10;
-  margin-top: 1em;
+  margin-top: 8em;
   padding: 0.2em;
   border: solid black;
+  background-color: white;
+}
+
+.vidéos {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: white;
+  align-items: center;
 }
 
 .modération {
   grid-column: 2 / 12;
-  margin-top: 1em;
+  margin-top: 8em;
   border: solid black;
+  background-color: white;
 }
 
-/*contact*/
+.modo {
+  display: flex;
+  padding: 0.2em;
+  background-color: lightgrey;
+  margin-top: 2em;
+}
+
+/*Galerie*/
+
+.galerie {
+  grid-column: 2 / 12;
+  margin-top: 8em;
+  padding: 0.2em;
+  border: solid black;
+  background-color: white;
+}
+
+.global-container-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container-image {
+  height: 22vh;
+  width: 22%;
+  padding: 0.2em;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+/*formulaire*/
 
 .contact {
   grid-column: 5 / 9;
+  margin-top: 8em;
 }
 
 .form {
@@ -78,4 +134,25 @@ grid-template-columns: repeat(12, 1fr);
 
 .champs {
 width: 30vw;
+}
+
+/*footer*/
+.footer {
+  grid-column: 1 / 13;
+  margin-top: 5em;
+  margin-bottom: 0em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: white;
+  background-color: darkgrey;
+  background-image: url("./images_pattern_banniere/dark_oak_pattern.png");
+}
+
+.footer .espacement {
+  padding: 0.6em;
+}
+.footer .li {
+  margin-top: 1em;
 }

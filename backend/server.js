@@ -20,10 +20,14 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }).then(() =
 const adminRouter = require('./routes/adminController');
 const presentationRouter = require('./routes/presentationController');
 const historiqueRouter = require('./routes/historiqueController');
+const videoRouter = require('./routes/videoController');
+const imageRouter = require('./routes/imageController');
 
 app.use("/admin", adminRouter);
 app.use("/dashboard/modifier_presentation", presentationRouter);
 app.use("/dashboard/ajout_historique", historiqueRouter);
+app.use("/dashboard/ajout_videos", videoRouter);
+app.use("/dashboard/ajout_photos", imageRouter);
 
 app.listen(port, ()=>{
 	console.log(`Server is running on port: ${port}`);
