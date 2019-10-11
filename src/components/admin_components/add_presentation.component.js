@@ -50,14 +50,14 @@ export default class AddPresentation extends Component {
 
 	render() {
 		return (
-			<div>
-				<h3>Ajout présentation.</h3>
-				<form>
-				<textarea type="text"
-		    	required
-		    	value={this.state.description}
-		    	onChange={this.onChangeDescription}></textarea>
-				<button type="submit" onClick= {(e) =>this.onSubmit(e)}>Valider</button>
+			<div className="edit">
+				<h3 className="titre">Ajout présentation.</h3>
+				<form className="form">
+					<textarea className="textarea" type="text"
+		    		required
+		    		value={this.state.description}
+		    		onChange={this.onChangeDescription}></textarea>
+					<button className="submit" type="submit" onClick= {(e) =>this.onSubmit(e)}>Valider</button>
 				</form>
 			</div>
 		)

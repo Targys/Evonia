@@ -6,7 +6,6 @@ export default class AdminNavbar extends Component {
 	render() {
 		return (
 			<nav className="navbaradmin">
-				<div>
 				<ul className="menu">
 					<li className="li_admin">
 						<Link to="/dashboard/modifier_presentation" className="lien">Modifier Présentation Saison</Link>
@@ -21,7 +20,6 @@ export default class AdminNavbar extends Component {
 						<Link to="/dashboard/ajout_videos" className="lien">Ajouter un lien de vidéos de la chaîne</Link>
 					</li>
 				</ul>
-				</div>
 			</nav>
 			)
 	}

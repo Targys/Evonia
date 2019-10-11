@@ -27,15 +27,15 @@ export default class Accueil extends Component {
 	render() {
 		return (
 				<div className="text">
-					<h3>Bienvenue sur le site d'Evonia!</h3>
+					<h1 className="titre">Bienvenue sur le site d'Evonia!</h1>
 					<div>
 						<h4>Qu'est ce que Evonia?</h4>
-						Evonia est un serveur minecraft privée, en survie, qui réunit une petite communauté 
-						de joueur. Ce serveur possède plusieurs saisons différentes où on essait d'innover en
-						ajoutant notre touche personnel au jeu, que ce soit dans la génération de map, des modifications
-						de certains aspect du gameplay voir l'ajout de contenu custom.
+						Evonia est un serveur minecraft privé, en survie, qui réunit une petite communauté 
+						de joueurs. Ce serveur possède plusieurs saisons différentes où on essait d'innover en
+						ajoutant notre touche personnel au jeu, que ce soit dans la génération de la map, des modifications
+						de certains aspects du gameplay voir l'ajout de contenus custom.
 						<h4>Puis je rejoindre votre serveur?</h4>
-						Bien évidemment! Pour cela il suffit de nous contacter via la rubrique dédié. Nous vous ferons passer
+						Bien évidemment! Pour cela il suffit de nous contacter via la rubrique dédiée. Nous vous ferons passer
 						une candidature afin de voir votre motivation, vos idées de projets sur le serveur et vos réalisations passées
 						(si vous en avez).
 					</div>

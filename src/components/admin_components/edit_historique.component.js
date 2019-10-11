@@ -61,20 +61,20 @@ export default class EditHistorique extends Component {
 
 	render() {
 		return (
-			<div>
-				<h3>Ajouter un historique.</h3>
-				<form>
-					<div>
-						<label>Titre:</label>
-						<input type="text" required value={this.state.titre} onChange={this.onChangeTitre}/>
+			<div className="edit">
+				<h3 className="titre">Ajouter un historique.</h3>
+				<form className="form">
+					<div className="container-champs">
+						<div className="champs">
+							<label htmlFor="edit-titre-historique" className="label">Titre:</label>
+							<label htmlFor="edit-description-historique" className="label">Description:</label>
+						</div>
+						<div className="champs">
+							<input id="edit-titre-historique" className="input" type="text" required value={this.state.titre} onChange={this.onChangeTitre}/>
+							<textarea id="edit-description-historique" className="textarea" required value={this.state.description} onChange={this.onChangeDescription}></textarea>
+						</div>
 					</div>
-					<div>
-						<label>Description:</label>
-						<textarea required value={this.state.description} onChange={this.onChangeDescription}></textarea>
-					</div>
-					<div>
-						<input type="submit" value="Editer l'historique" onClick={(e) => this.onSubmit(e)} />
-					</div>
+					<input className="submit" type="submit" value="Editer l'historique" onClick={(e) => this.onSubmit(e)} />
 				</form>
 			</div>
 		)

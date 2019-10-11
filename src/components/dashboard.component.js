@@ -26,8 +26,8 @@ export default class Dashboard extends Component {
 	render() {
 		return (
 			<div className="dashboard">
-				<button onClick={this.disconnect} type="submit">Déconnexion</button>
-				<h3>Le Dashboard</h3>
+				<button className="disconnect" onClick={this.disconnect} type="submit">Déconnexion</button>
+				<h2 className="titre">Le Dashboard</h2>
 				<Router>
 				<div>
 				<AdminNavbar />

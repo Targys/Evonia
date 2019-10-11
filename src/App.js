@@ -18,6 +18,7 @@ function App() {
   return (
     <Router>
     <div className="container">
+    <div className="filtre"></div>
     <Navbar />
     <Route path="/" exact component={Accueil} />
     <Route path="/historique" exact component={Historique} />

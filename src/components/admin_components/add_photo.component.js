@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 const Image = props => (
-	<li>{props.image.titre} <button onClick={() => { props.deleteImage(props.image._id) }}>supprimer</button></li>
+	<li>{props.image.titre} <button className="modif" onClick={() => { props.deleteImage(props.image._id) }}>supprimer</button></li>
 	)
 
 export default class AddPhoto extends Component {
@@ -74,20 +74,20 @@ export default class AddPhoto extends Component {
 
 	render() {
 		return (
-			<div>
-				<h3>Ajout photos.</h3>
-				<form onSubmit={this.onSubmit}>
-					<div>
-						<label>Titre de la photo:</label>
-						<input type="text" value={this.state.titre} onChange={this.onChangeTitre} />
+			<div className="edit">
+				<h3 className="titre">Ajout photos.</h3>
+				<form className="form" onSubmit={this.onSubmit}>
+					<div className="container-champs">
+						<div className="champs">
+							<label htmlFor="titre-image" className="label">Titre de la photo:</label>
+							<label htmlFor="image" className="label">Envoyer une photo:</label>
+						</div>
+						<div className="champs">
+							<input id="titre-image" className="input" type="text" value={this.state.titre} onChange={this.onChangeTitre} />
+							<input id="image" className="input" name="img" type="file" onChange={this.onFileChange}/>
+						</div>
 					</div>
-					<div>
-						<label>Envoyer une photo:</label>
-						<input name="img" type="file" onChange={this.onFileChange}/>
-					</div>
-					<div>
-						<button type="submit" >Upload</button>
-					</div>
+					<button className="submit" type="submit" >Upload</button>
 				</form>
 				<div>
 					<ul>

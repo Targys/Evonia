@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 const Video = props => (
-	<li>{props.video.titre} <button onClick={() => { props.deleteVideo(props.video._id) }}>supprimer</button></li>
+	<li>{props.video.titre} <button className="modif" onClick={() => { props.deleteVideo(props.video._id) }}>supprimer</button></li>
 	)
 
 export default class AddVideo extends Component {
@@ -78,22 +78,22 @@ export default class AddVideo extends Component {
 
 	render() {
 		return (
-			<div>
-				<h3>Ajoutez une vidéo.</h3>
-				<form>
-					<div>
-						<label>Titre:</label>
-						<input type="text" required value={this.state.titre} onChange={this.onChangeTitre}/>
+			<div className="edit">
+				<h3 className="titre">Ajouter une vidéo.</h3>
+				<form className="form">
+					<div className="container-champs">
+						<div className="champs">
+							<label htmlFor="titre-video" className="label">Titre:</label>
+							<label htmlFor="url" className="label">Url:</label>
+						</div>
+						<div className="champs">
+							<input id="titre-video" className="input" type="text" required value={this.state.titre} onChange={this.onChangeTitre}/>
+							<input id="url" className="input" type="text" required value={this.state.url} onChange={this.onChangeUrl}/>
+						</div>
 					</div>
-					<div>
-						<label>Url:</label>
-						<input type="text" required value={this.state.url} onChange={this.onChangeUrl}/>
-					</div>
-					<div>
-						<input type="submit" value="Ajoutez" onClick={(e) => this.onSubmit(e)} />
-					</div>
+					<input className="submit" type="submit" value="Ajouter" onClick={(e) => this.onSubmit(e)} />
 				</form>
-				<h3>Supprimer une vidéo.</h3>
+				<h3 className="titre">Supprimer une vidéo.</h3>
 				<div>
 					<ul>
 						{ this.videoList() }

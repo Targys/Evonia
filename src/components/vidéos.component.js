@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 const VideoList = props => (
-	<div>
-		<h3>{props.video.titre}</h3>
-		<iframe title={props.video.titre} width="500" height="280" src={"https://www.youtube.com/embed/" + (props.video.url) } frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+	<div className="video_container">
+		<h3 className="titre">{props.video.titre}</h3>
+		<iframe className="iframe" title={props.video.titre} src={"https://www.youtube.com/embed/" + (props.video.url) } frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 	</div>
 )
 
@@ -35,7 +35,7 @@ export default class Vidéos extends Component {
 	render() {
 		return (
 				<div className="text">
-					<h3>Liste des vidéos de la chaîne youtube.</h3>
+					<h2 className="titre">Liste des vidéos de la chaîne youtube.</h2>
 					<div className="vidéos">
 					{this.videoList()}
 					</div>

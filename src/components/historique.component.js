@@ -34,7 +34,7 @@ export default class Historique extends Component {
 	render() {
 		return (
 				<div className="text">
-					<h3>Historique des saisons.</h3>
+					<h2 className="titre">Historique des saisons.</h2>
 					{this.historiqueList()}
 				</div>
 			)

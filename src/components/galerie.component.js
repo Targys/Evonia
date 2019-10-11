@@ -44,7 +44,7 @@ export default class Galerie extends Component {
 
 		return (
 				<div className="galerie">
-					<h3>Galerie d'image du serveur.</h3>
+					<h2 className="titre">Galerie d'image du serveur.</h2>
 					<div className="global-container-image">
 						{this.imageList()}
 					</div>

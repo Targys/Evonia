@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const multer = require("multer");
+const fs = require('fs');
 let image = require("../models/SchemaImage");
 
 const DIR = "../public/images";
@@ -53,6 +54,9 @@ router.route('/:id').get((req, res) => {
 });
 
 router.route('/:id').delete((req, res) => {
+	image.findById(req.params.id).then((doc, err) => {
+		fs.unlink(`../public${doc.img}`, (err) => {})
+	})
 	image.findByIdAndDelete(req.params.id)
 	  .then(() => res.json('Image supprimée.'))
 	  .catch(err => res.status(400).json('Error: ' + err));

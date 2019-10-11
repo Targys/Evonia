@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const Historique = props => (
-	<li>{props.historique.titre} <Link to={"/dashboard/edit_historique/"+props.historique._id}>éditer</Link> | <a href="#" onClick={() => { props.deleteHistorique(props.historique._id) }}>supprimer</a></li>
+	<li>{props.historique.titre} <Link className="modif" to={"/dashboard/edit_historique/"+props.historique._id}>Editer</Link> | <button className="modif" onClick={() => { props.deleteHistorique(props.historique._id) }}>Supprimer</button></li>
 	)
 
 export default class AddHistorique extends Component {
@@ -76,22 +76,22 @@ export default class AddHistorique extends Component {
 
 	render() {
 		return (
-			<div>
-				<h3>Ajouter un historique.</h3>
-				<form>
-					<div>
-						<label>Titre:</label>
-						<input type="text" required value={this.state.titre} onChange={this.onChangeTitre}/>
+			<div className="edit">
+				<h3 className="titre">Ajouter un historique.</h3>
+				<form className="form">
+					<div className="container-champs">
+						<div className="champs">
+							<label className="label" htmlFor="titre-historique">Titre:</label>
+							<label className="label" htmlFor="description-historique">Description:</label>
+						</div>
+						<div className="champs">
+							<input id="titre-historique" className="input" type="text" required value={this.state.titre} onChange={this.onChangeTitre}/>
+							<textarea id="description-historique" className="textarea" required value={this.state.description} onChange={this.onChangeDescription}></textarea>
+						</div>
 					</div>
-					<div>
-						<label>Description:</label>
-						<textarea required value={this.state.description} onChange={this.onChangeDescription}></textarea>
-					</div>
-					<div>
-						<input type="submit" value="Créer un nouvel historique" onClick={(e) => this.onSubmit(e)} />
-					</div>
+					<input className="submit_historique" type="submit" value="Créer un nouvel historique" onClick={(e) => this.onSubmit(e)} />
 				</form>
-				<h3>Editer un historique.</h3>
+				<h3 className="titre">Editer un historique.</h3>
 				<div>
 					<ul>
 						{ this.historiqueList() }

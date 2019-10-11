@@ -45,20 +45,20 @@ export default class Admin extends Component {
 
 	render() {
 		return (
-			<div className="contact">
+			<div className="container-login">
+            <h3 className="titre">Login</h3>
 				<form className="form">
-					<div className="champs">
-						<label>Pseudo: 
-						<input id="pseudo" type="text" value={this.state.pseudo} required onChange={this.handleChange} />
-						</label>
-					</div>
-					<div className="champs">
-						<label>Mots de passe:</label>
-						<input id="mot_de_passe" type="password" value={this.state.mot_de_passe} required onChange={this.handleChange} />
-					</div>
-					<div>
-						<input type="submit" onClick={this.send} />
-					</div>
+                    <div className="container-champs">
+					   <div className="champs">
+						  <label className="label" htmlFor="pseudo">Pseudo: </label>
+                          <label className="label" htmlFor="mot_de_passe">Mots de passe: </label>
+					   </div>
+					   <div className="champs">
+                            <input className="input" id="pseudo" type="text" value={this.state.pseudo} required onChange={this.handleChange} />
+						    <input className="input" id="mot_de_passe" type="password" value={this.state.mot_de_passe} required onChange={this.handleChange} />
+					   </div>
+                    </div>
+                    <input className="submit" type="submit" onClick={this.send} />
 				</form>
 			</div>
 		)
