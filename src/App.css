@@ -1,6 +1,98 @@
+.container {
+  font-size: 16px;
+  display: grid;
+  -webkit-backdrop-filter: grayscale(5%);
+  backdrop-filter: grayscale(5%);
+  grid-template-columns: repeat(12, 1fr);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 90% 100%;
+  -webkit-animation: slide 60s linear infinite both;
+  animation: slide 60s linear infinite both;
+}
+
+.filtre {
+  position: fixed;
+  margin-top: 4em;
+  height: 100vh;
+  width: 100%;
+  -webkit-backdrop-filter: grayscale(60%);
+  backdrop-filter: grayscale(60%);
+  z-index: 0;
+}
+
+/*dashboard*/
+
+.dashboard {
+  grid-column: 2 / 12;
+  margin-top: 8em;
+  min-height: 35vh;
+  border: solid black;
+  background-color: rgba(240, 240, 240, 0.8);
+  z-index: 1;
+}
+
+.edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.disconnect {
+  height: 5vh;
+  width: 10vw;
+  margin-top: 1vh;
+  margin-right: 10%;
+  margin-left: 85%;
+  border: solid black;
+  background-color: white;
+}
+
+.disconnect:hover, .disconnect:focus {
+  background-color: lightgreen;
+  color: maroon;
+}
+
+.disconnect:active {
+
+}
+
+.modif {
+  height: 5vh;
+  width: 8vw;
+  margin-left: 1em;
+  color: black;
+  border: solid black;
+  text-decoration: none;
+  background-color: white;
+}
+
+.modif:hover, .modif:focus {
+  background-color: green;
+  color: maroon;
+}
+
+/*menu de navigation*/
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding-bottom: 0.5em;
+  background-color: darkgrey;
+  background-image: url("./images_pattern_banniere/dark_oak_pattern.png");
+  z-index: 2;
+}
+
+.navbaradmin {
+  width: 100%;
+  padding-bottom: 0.5em; 
+}
+
 .menu {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   list-style: none;
 }
@@ -10,6 +102,15 @@
   width: 10%;
   text-align: center;
   background-color: lightgrey;
+  background-image: url("./images_pattern_banniere/oak-plank-pattern.jpg");
+}
+
+.li_admin {
+  margin-top: 0.5em;
+  line-height: 2;
+  width: 15%;
+  text-align: center;
+  background-color: white;
 }
 
 .lien {
@@ -17,9 +118,224 @@
 }
 
 .lien:link, .lien:visited {
+  color: white;
+}
+
+.li_admin .lien:link, .li_admin .lien:visited {
   color: black;
 }
 
 .lien:focus, .lien:active, .lien:hover {
+  color: lightgreen;
+}
+
+.li_admin .lien:focus, .li_admin .lien:active, .li_admin .lien:hover {
   color: green;
+}
+
+/*contenu*/
+
+.titre {
+  text-align: center;
+}
+
+.text {
+  grid-column: 4 / 10;
+  margin-top: 8em;
+  line-height: 1.4em;
+  padding: 0.2em;
+  border: solid black;
+  background-color: rgba(240, 240, 240, 0.8);
+  z-index: 1
+}
+
+.contact {
+  padding-bottom: 1em;
+}
+
+.vidéos {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.video_container {
+  margin-bottom: 5em;
+  background-color: lightgrey;
+  height: 48vh;
+  width: 100%;
+}
+
+.iframe {
+  height: 76%;
+  width: 70%;
+  outline: solid black;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.modération {
+  grid-column: 2 / 12;
+  margin-top: 8em;
+  line-height: 1.4em;
+  border: solid black;
+  background-color: rgba(240, 240, 240, 0.8);
+  z-index: 1
+}
+
+.modo {
+  display: flex;
+  padding: 0.2em;
+  background-color: lightgrey;
+  margin-top: 2em;
+}
+
+/*Galerie*/
+
+.galerie {
+  grid-column: 2 / 12;
+  margin-top: 8em;
+  padding: 0.2em;
+  border: solid black;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+}
+
+.global-container-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container-image {
+  height: 22vh;
+  width: 22%;
+  padding: 0.2em;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+/*formulaire*/
+
+.container-login {
+  grid-column: 5 / 9;
+  margin-top: 8em;
+  border: solid black;
+  background-color: rgba(240, 240, 240, 0.8);
+  z-index: 1;
+}
+
+.form {
+  height: 32.6vh;
+  width: 35vw;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-champs {
+  display: flex;
+  padding: 1em;
+}
+
+.textarea {
+  height: 15vh;
+  width: 25vw;
+  resize: none;
+}
+
+.champs {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+}
+
+.label {
+  padding-bottom: 0.6em;
+}
+
+.input {
+  margin-bottom: 0.6em;
+}
+
+.submit {
+  height: 5vh;
+  width: 10vw;
+  border: solid black;
+  background-color: white;
+  align-self: center;
+}
+
+.submit_historique {
+  height: 5vh;
+  width: 15vw;
+  border: solid black;
+  background-color: white;
+  align-self: center;
+}
+
+/*footer*/
+.footer {
+  grid-column: 1 / 13;
+  margin-top: 8em;
+  margin-bottom: 0em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: white;
+  background-color: darkgrey;
+  background-image: url("./images_pattern_banniere/dark_oak_pattern.png");
+  z-index: 1;
+}
+
+.footer .espacement {
+  padding: 0.6em;
+}
+.footer .li {
+  margin-top: 1em;
+}
+
+-webkit-@keyframes slide {
+  0%{background-image: linear-gradient(rgba(191, 191, 191, 0.6),rgba(191, 191, 191, 0.6)), 
+    url("./images_pattern_banniere/spawn_saison2.png");
+  }
+  33.33%{background-image: linear-gradient(rgba(191, 191, 191, 0.6),rgba(191, 191, 191, 0.6)), 
+    url("./images_pattern_banniere/spawn_saison3.png");
+  }
+  66.67%{background-image: linear-gradient(rgba(191, 191, 191, 0.6),rgba(191, 191, 191, 0.6)),
+    url("./images_pattern_banniere/spawnnether_saison3.png");
+  }
+  100%{background-image: linear-gradient(rgba(191, 191, 191, 0.6),rgba(191, 191, 191, 0.6)), 
+    url("./images_pattern_banniere/spawn_saison2.png");
+  }
+}
+
+@keyframes slide {
+  from{background-image: url("./images_pattern_banniere/spawn_saison2.png");
+  }
+  30%{background-image: url("./images_pattern_banniere/spawn_saison2.png"),
+    url("./images_pattern_banniere/spawn_saison3.png");
+
+  }
+  33.33%{background-image: url("./images_pattern_banniere/spawn_saison3.png");
+  }
+  63.33%{background-image: url("./images_pattern_banniere/spawn_saison3.png"),
+    url("./images_pattern_banniere/spawnnether_saison3.png");
+
+  }
+  66.67%{background-image: url("./images_pattern_banniere/spawnnether_saison3.png");
+  }
+  97.33%{background-image: url("./images_pattern_banniere/spawnnether_saison3.png"),
+    url("./images_pattern_banniere/spawn_saison2.png");
+
+  }
+  to{background-image: url("./images_pattern_banniere/spawn_saison2.png");
+  }
 }
