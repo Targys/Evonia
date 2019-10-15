@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 const Video = props => (
-	<li>{props.video.titre} <button className="modif" onClick={() => { props.deleteVideo(props.video._id) }}>supprimer</button></li>
+	<li className="li_edit">{props.video.titre} <button className="modif" onClick={() => { props.deleteVideo(props.video._id) }}>supprimer</button></li>
 	)
 
 export default class AddVideo extends Component {
@@ -74,6 +74,7 @@ export default class AddVideo extends Component {
 
 		axios.post('http://localhost:5000/dashboard/ajout_videos/add', video)
 			.then(res => console.log(res.data));
+		window.location = '/dashboard/ajout_videos';
 	}
 
 	render() {

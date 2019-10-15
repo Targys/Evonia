@@ -33,6 +33,10 @@
   z-index: 1;
 }
 
+.li_edit {
+  padding: 0.2em;
+}
+
 .edit {
   display: flex;
   flex-direction: column;
@@ -40,6 +44,7 @@
 }
 
 .disconnect {
+  cursor: pointer;
   height: 5vh;
   width: 10vw;
   margin-top: 1vh;
@@ -50,7 +55,7 @@
 }
 
 .disconnect:hover, .disconnect:focus {
-  background-color: lightgreen;
+  background-color: green;
   color: maroon;
 }
 
@@ -59,11 +64,12 @@
 }
 
 .modif {
-  height: 5vh;
-  width: 8vw;
+  cursor: pointer;
+  height: 4vh;
+  width: 6vw;
   margin-left: 1em;
   color: black;
-  border: solid black;
+  border: solid black 0.1em;
   text-decoration: none;
   background-color: white;
 }
@@ -86,6 +92,7 @@
 
 .navbaradmin {
   width: 100%;
+  margin-bottom: 3.55em;
   padding-bottom: 0.5em; 
 }
 
@@ -219,6 +226,14 @@
   width: 100%;
 }
 
+.liste {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+}
+
 /*formulaire*/
 
 .container-login {
@@ -264,20 +279,36 @@
   margin-bottom: 0.6em;
 }
 
+.input_file {
+  background-color: white;
+}
+
 .submit {
+  cursor: pointer;
   height: 5vh;
   width: 10vw;
-  border: solid black;
+  border: solid black 0.1em;
   background-color: white;
   align-self: center;
 }
 
+.submit:hover, .submit:focus {
+  background-color: green;
+  color: maroon;
+}
+
 .submit_historique {
+  cursor: pointer;
   height: 5vh;
   width: 15vw;
   border: solid black;
   background-color: white;
   align-self: center;
+}
+
+.submit_historique:hover, .submit_historique:focus {
+  background-color: green;
+  color: maroon;
 }
 
 /*footer*/
@@ -337,5 +368,57 @@
 
   }
   to{background-image: url("./images_pattern_banniere/spawn_saison2.png");
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    font-size: 10px;
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  .navbar {
+float: left;
+height: 100vh;
+width: 25%;
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+
+  .li {
+    width: 80%;
+    margin-top: 1em;
+  }
+
+  .text {
+    grid-column: 4 / 13;
+    margin: 0;
+  }
+
+  .galerie {
+    margin-top: 0;
+    grid-column: 4 / 13;
+  }
+
+  .global-container-image {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .container-image {
+    width: 80%;
+  }
+
+  .footer {
+    grid-column: 4 / 13;
   }
 }

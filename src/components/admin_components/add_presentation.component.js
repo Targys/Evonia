@@ -44,7 +44,7 @@ export default class AddPresentation extends Component {
 
 		axios.post('http://localhost:5000/dashboard/modifier_presentation/update', presentation)
 			.then(res => console.log(res.data));
-
+		window.location = '/dashboard/modifier_presentation';
 	}
 
 
