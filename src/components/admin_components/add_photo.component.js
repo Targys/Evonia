@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 const Image = props => (
-	<li>{props.image.titre} <button className="modif" onClick={() => { props.deleteImage(props.image._id) }}>supprimer</button></li>
+	<li className="li_edit">{props.image.titre} <button className="modif" onClick={() => { props.deleteImage(props.image._id) }}>supprimer</button></li>
 	)
 
 export default class AddPhoto extends Component {
@@ -70,12 +70,14 @@ export default class AddPhoto extends Component {
     headers: {'Access-Control-Allow-Origin': '*'}
 	})
 			.then(res => console.log(res.data));
+		window.location = '/dashboard/ajout_photos';
 	}
 
 	render() {
 		return (
 			<div className="edit">
 				<h3 className="titre">Ajout photos.</h3>
+				<div>Veuillez minifier les images avant de les uploads!</div>
 				<form className="form" onSubmit={this.onSubmit}>
 					<div className="container-champs">
 						<div className="champs">
@@ -84,13 +86,13 @@ export default class AddPhoto extends Component {
 						</div>
 						<div className="champs">
 							<input id="titre-image" className="input" type="text" value={this.state.titre} onChange={this.onChangeTitre} />
-							<input id="image" className="input" name="img" type="file" onChange={this.onFileChange}/>
+							<input id="image" className="input input_file" name="img" type="file" onChange={this.onFileChange}/>
 						</div>
 					</div>
 					<button className="submit" type="submit" >Upload</button>
 				</form>
 				<div>
-					<ul>
+					<ul className="liste">
 						{ this.imageList() }
 					</ul>
 				</div>

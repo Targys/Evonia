@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const Historique = props => (
-	<li>{props.historique.titre} <Link className="modif" to={"/dashboard/edit_historique/"+props.historique._id}>Editer</Link> | <button className="modif" onClick={() => { props.deleteHistorique(props.historique._id) }}>Supprimer</button></li>
+	<li className="li_edit">{props.historique.titre} <Link className="modif" to={"/dashboard/edit_historique/"+props.historique._id}>Editer</Link> | <button className="modif" onClick={() => { props.deleteHistorique(props.historique._id) }}>Supprimer</button></li>
 	)
 
 export default class AddHistorique extends Component {
@@ -72,6 +72,7 @@ export default class AddHistorique extends Component {
 
 		axios.post('http://localhost:5000/dashboard/ajout_historique/add', historique)
 			.then(res => console.log(res.data));
+		window.location = '/dashboard/ajout_historique';
 	}
 
 	render() {

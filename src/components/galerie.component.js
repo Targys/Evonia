@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import 'img-lightbox';
 
 const ImageGalery = props => (
 	<div className="container-image">
-	<a href={props.image.img}
-	className="img-lightbox-link"
-	target="_blank"
-aria-hidden="true"
-rel="noopener noreferrer lightbox">
-	 <img className="image" alt={props.image.titre} src={props.image.img} /></a>
+		<a href={props.image.img}
+		target="_blank"
+		aria-hidden="true"
+		rel="noopener noreferrer">
+		<img className="image" alt={props.image.titre} src={props.image.img} /></a>
 	</div> 
 	)
-//imgLightbox("img-lightbox-link");
+
 export default class Galerie extends Component {
 
 	constructor(props) {

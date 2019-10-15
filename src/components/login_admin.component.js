@@ -28,7 +28,6 @@ export default class Admin extends Component {
             return;
         }
         login(this.state.pseudo, this.state.mot_de_passe).then(function(data){
-        	console.log(data);
             localStorage.setItem('token', data.data.token);
             window.location = "/dashboard"
         },function(error){
