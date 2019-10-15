@@ -16,7 +16,7 @@ export default class AddPresentation extends Component {
 
 	componentDidMount() {
 		console.log(this.props);
-		axios.get('http://localhost:5000/dashboard/modifier_presentation/afficher')
+		axios.get('http://92.222.95.250:5000/dashboard/modifier_presentation/afficher')
 		  .then(response => {
 		  	this.setState({
 		  		description: response.data[0].description
@@ -42,7 +42,7 @@ export default class AddPresentation extends Component {
 
 		console.log(presentation);
 
-		axios.post('http://localhost:5000/dashboard/modifier_presentation/update', presentation)
+		axios.post('http://92.222.95.250:5000/dashboard/modifier_presentation/update', presentation)
 			.then(res => console.log(res.data));
 		window.location = '/dashboard/modifier_presentation';
 	}

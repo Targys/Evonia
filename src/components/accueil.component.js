@@ -13,7 +13,7 @@ export default class Accueil extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://localhost:5000/dashboard/modifier_presentation/afficher')
+		axios.get('http://92.222.95.250:5000/dashboard/modifier_presentation/afficher')
 		  .then(response => {
 		  	this.setState({
 		  		description: response.data[0].description

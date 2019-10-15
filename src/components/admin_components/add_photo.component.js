@@ -22,7 +22,7 @@ export default class AddPhoto extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://localhost:5000/dashboard/ajout_photos')
+		axios.get('http://92.222.95.250:5000/dashboard/ajout_photos')
 			.then(response => {
 				this.setState({ images: response.data })
 			})
@@ -32,7 +32,7 @@ export default class AddPhoto extends Component {
 	}
 
 	deleteImage(id) {
-		axios.delete('http://localhost:5000/dashboard/ajout_photos/'+id)
+		axios.delete('http://92.222.95.250:5000/dashboard/ajout_photos/'+id)
 			.then(res => console.log(res.data));
 		this.setState({
 			images: this.state.images.filter(el => el._id !== id)
@@ -66,7 +66,7 @@ export default class AddPhoto extends Component {
 		formData.append('img', this.state.img)
 
 
-		axios.post('http://localhost:5000/dashboard/ajout_photos/upload', formData, {
+		axios.post('http://92.222.95.250:5000/dashboard/ajout_photos/upload', formData, {
     headers: {'Access-Control-Allow-Origin': '*'}
 	})
 			.then(res => console.log(res.data));

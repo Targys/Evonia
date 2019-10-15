@@ -17,7 +17,7 @@ export default class Vidéos extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://localhost:5000/dashboard/ajout_videos')
+		axios.get('http://92.222.95.250:5000/dashboard/ajout_videos')
 			.then(response => {
 				this.setState({ videos: response.data })
 			})

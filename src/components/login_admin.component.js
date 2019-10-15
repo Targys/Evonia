@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const burl = "http://localhost:5000";
+const burl = "http://92.222.95.250:5000";
 
 function login(pseudo,mot_de_passe) {
         return axios.post(burl + '/admin/login',{

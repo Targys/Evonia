@@ -18,7 +18,7 @@ export default class EditHistorique extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://localhost:5000/dashboard/ajout_historique/'+this.props.match.params.id)
+		axios.get('http://92.222.95.250:5000/dashboard/ajout_historique/'+this.props.match.params.id)
 		  .then(response => {
 		  	this.setState({
 		  		titre: response.data.titre,
@@ -53,7 +53,7 @@ export default class EditHistorique extends Component {
 
 		console.log(historique);
 
-		axios.post('http://localhost:5000/dashboard/ajout_historique/update/'+this.props.match.params.id, historique)
+		axios.post('http://92.222.95.250:5000/dashboard/ajout_historique/update/'+this.props.match.params.id, historique)
 			.then(res => console.log(res.data));
 
 		window.location = '/dashboard/ajout_historique';

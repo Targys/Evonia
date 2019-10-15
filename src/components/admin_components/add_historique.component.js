@@ -24,7 +24,7 @@ export default class AddHistorique extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://localhost:5000/dashboard/ajout_historique')
+		axios.get('http://92.222.95.250:5000/dashboard/ajout_historique')
 			.then(response => {
 				this.setState({ historiques: response.data })
 			})
@@ -34,7 +34,7 @@ export default class AddHistorique extends Component {
 	}
 
 	deleteHistorique(id) {
-		axios.delete('http://localhost:5000/dashboard/ajout_historique/'+id)
+		axios.delete('http://92.222.95.250:5000/dashboard/ajout_historique/'+id)
 			.then(res => console.log(res.data));
 		this.setState({
 			historiques: this.state.historiques.filter(el => el._id !== id)
@@ -70,7 +70,7 @@ export default class AddHistorique extends Component {
 
 		console.log(historique);
 
-		axios.post('http://localhost:5000/dashboard/ajout_historique/add', historique)
+		axios.post('http://92.222.95.250:5000/dashboard/ajout_historique/add', historique)
 			.then(res => console.log(res.data));
 		window.location = '/dashboard/ajout_historique';
 	}
