@@ -1,5 +1,6 @@
 .container {
   font-size: 16px;
+  min-height: 100vh;
   display: grid;
   -webkit-backdrop-filter: grayscale(5%);
   backdrop-filter: grayscale(5%);
@@ -147,6 +148,7 @@
 }
 
 .text {
+  min-height: 50vh;
   grid-column: 4 / 10;
   margin-top: 8em;
   line-height: 1.4em;
@@ -195,6 +197,10 @@
   padding: 0.2em;
   background-color: lightgrey;
   margin-top: 2em;
+}
+
+.img_modo {
+  height: 25vh;
 }
 
 /*Galerie*/
@@ -313,8 +319,9 @@
 
 /*footer*/
 .footer {
+  height: 12vh;
   grid-column: 1 / 13;
-  margin-top: 8em;
+  margin-top: 25vh;
   margin-bottom: 0em;
   display: flex;
   flex-direction: column;
@@ -379,9 +386,9 @@
   }
 
   .navbar {
-float: left;
-height: 100vh;
-width: 25%;
+    float: left;
+    height: 100vh;
+    width: 25%;
   }
 
   .menu {
@@ -394,13 +401,23 @@ width: 25%;
   }
 
   .li {
+    font-size: 12px;
     width: 80%;
-    margin-top: 1em;
+    margin-top: 2em;
   }
 
   .text {
     grid-column: 4 / 13;
     margin: 0;
+  }
+
+  .modération {
+    grid-column: 4 / 13;
+    margin: 0;
+  }
+
+  .modo {
+    flex-direction: column;
   }
 
   .galerie {
@@ -419,6 +436,7 @@ width: 25%;
   }
 
   .footer {
+    margin-top: 40vh;
     grid-column: 4 / 13;
   }
 }

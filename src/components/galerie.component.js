@@ -23,7 +23,6 @@ export default class Galerie extends Component {
 	componentDidMount() {
 		axios.get('http://92.222.95.250:5000/dashboard/ajout_photos')
 			.then(response => {
-				console.log(response.data[0].img);
 				this.setState({ images: response.data })
 			})
 			.catch((error) => {
