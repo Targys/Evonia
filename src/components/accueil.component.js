@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import banniere from '../images_pattern_banniere/bannière_evonia.png';
 
 export default class Accueil extends Component {
 	constructor(props) {
@@ -27,6 +28,7 @@ export default class Accueil extends Component {
 	render() {
 		return (
 				<div className="text">
+					<img className="banniere" src={banniere}/>
 					<h1 className="titre">Bienvenue sur le site d'Evonia!</h1>
 					<div>
 						<h4>Qu'est ce que Evonia?</h4>

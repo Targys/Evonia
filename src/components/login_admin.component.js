@@ -21,6 +21,7 @@ export default class Admin extends Component {
         this.send.bind(this);
     }
     send = event => {
+    	event.preventDefault();
         if(this.state.pseudo.length === 0){
             return;
         }
@@ -46,7 +47,7 @@ export default class Admin extends Component {
 		return (
 			<div className="container-login">
             <h3 className="titre">Login</h3>
-				<form className="form">
+				<form className="form" onSubmit={e=> this.send(e)}>
                     <div className="container-champs">
 					   <div className="champs">
 						  <label className="label" htmlFor="pseudo">Pseudo: </label>
