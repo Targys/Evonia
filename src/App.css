@@ -158,6 +158,13 @@
   z-index: 1
 }
 
+.banniere {
+  filter: grayscale(30%);
+  height: 25vh;
+  width: 100%;
+  outline: solid black;
+}
+
 .contact {
   padding-bottom: 1em;
 }
@@ -385,6 +392,11 @@
     animation: none;
   }
 
+   .dashboard {
+    grid-column: 4 / 13;
+    margin: 0;
+  }
+
   .navbar {
     float: left;
     height: 100vh;
@@ -400,15 +412,44 @@
     align-content: flex-start;
   }
 
+  .navbaradmin .menu {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
   .li {
     font-size: 12px;
     width: 80%;
     margin-top: 2em;
   }
 
+  .textarea {
+    width: 40vw;
+    height: 20vh;
+  }
+
+  .li_admin {
+    width: 30%;
+  }
+
+  .disconnect {
+    width: 28vw;
+    margin-left: 50%;
+  }
+
+  .edit {
+    align-content: center;
+    justify-content: center;
+  }
+
   .text {
     grid-column: 4 / 13;
     margin: 0;
+  }
+
+  .banniere {
+    height: 15vh;
   }
 
   .modération {
@@ -433,6 +474,36 @@
 
   .container-image {
     width: 80%;
+  }
+
+  .container-login {
+    grid-column: 4 / 13;
+    margin: 0;
+  }
+
+  .form {
+    margin-left: 5em;
+  }
+
+  .input_file {
+    font-size: 10px;
+    width: 60vw;
+  }
+
+  .edit .form {
+    margin: 0;
+  }
+
+  .container-champs {
+    padding: 0;
+  }
+
+  .champs {
+    margin: 0;
+  }
+
+  .submit {
+    width: 15vw;
   }
 
   .footer {
