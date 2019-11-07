@@ -2,8 +2,6 @@
   font-size: 16px;
   min-height: 100vh;
   display: grid;
-  -webkit-backdrop-filter: grayscale(5%);
-  backdrop-filter: grayscale(5%);
   grid-template-columns: repeat(12, 1fr);
   background-repeat: no-repeat;
   background-position: center;
@@ -348,17 +346,25 @@
 }
 
 -webkit-@keyframes slide {
-  0%{background-image: linear-gradient(rgba(191, 191, 191, 0.6),rgba(191, 191, 191, 0.6)), 
-    url("./images_pattern_banniere/spawn_saison2.png");
+  from{background-image: url("./images_pattern_banniere/spawn_saison2.png");
   }
-  33.33%{background-image: linear-gradient(rgba(191, 191, 191, 0.6),rgba(191, 191, 191, 0.6)), 
+  30%{background-image: url("./images_pattern_banniere/spawn_saison2.png"),
     url("./images_pattern_banniere/spawn_saison3.png");
+
   }
-  66.67%{background-image: linear-gradient(rgba(191, 191, 191, 0.6),rgba(191, 191, 191, 0.6)),
+  33.33%{background-image: url("./images_pattern_banniere/spawn_saison3.png");
+  }
+  63.33%{background-image: url("./images_pattern_banniere/spawn_saison3.png"),
     url("./images_pattern_banniere/spawnnether_saison3.png");
+
   }
-  100%{background-image: linear-gradient(rgba(191, 191, 191, 0.6),rgba(191, 191, 191, 0.6)), 
+  66.67%{background-image: url("./images_pattern_banniere/spawnnether_saison3.png");
+  }
+  97.33%{background-image: url("./images_pattern_banniere/spawnnether_saison3.png"),
     url("./images_pattern_banniere/spawn_saison2.png");
+
+  }
+  to{background-image: url("./images_pattern_banniere/spawn_saison2.png");
   }
 }
 
