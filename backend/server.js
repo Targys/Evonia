@@ -10,6 +10,7 @@ const port = process.env.PORT || 5000
 
 app.use(cors());
 app.use(express.json());
+app.use(require('prerender-node').set('prerenderServiceUrl','http://localhost:3000/').set('prerenderToken', 'hOYKP0Da3SG3ydo7wwzT'));
 
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }).then(() => {
     console.log('Connected to mongoDB')
